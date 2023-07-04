@@ -9,8 +9,7 @@ public class VideoTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tvLight.SetActive(false);
-        videoPlayer.SetActive(false);
+    
     }
 
     // Update is called once per frame
