@@ -10,15 +10,16 @@ TagManager:
   - Video3
   - PalinsestoCircle
   - GreenScreenCircle
+  - Trigger
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grande Fratello
   - Water
   - UI
   - NeonLayer
-  - 
+  - Room
   - 
   - 
   - 
