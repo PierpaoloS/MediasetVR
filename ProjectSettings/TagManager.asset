@@ -8,6 +8,8 @@ TagManager:
   - Video1
   - Video2
   - Video3
+  - PalinsestoCircle
+  - GreenScreenCircle
   layers:
   - Default
   - TransparentFX
