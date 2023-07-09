@@ -7,13 +7,6 @@ using UnityEngine;
 public class GFSceneManager : MonoBehaviour
 {
     [SerializeField] private Camera _cam;
-   // private int oldMask;
-   /*private void Awake()
-   {
-       _cam = FindObjectOfType<Camera>();
-       oldMask = _cam.cullingMask;
-   }*/
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Ho colliso con: " + other);
