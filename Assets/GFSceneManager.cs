@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro.EditorUtilities;
+//using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class GFSceneManager : MonoBehaviour
@@ -15,7 +15,22 @@ public class GFSceneManager : MonoBehaviour
             CameraExtensions.LayerCullingHide(_cam, "Room" );
             CameraExtensions.LayerCullingHide(_cam, "NeonLayer");
             CameraExtensions.LayerCullingHide(_cam,"Default");
+            CameraExtensions.LayerCullingHide(_cam,"TVLights");
             CameraExtensions.LayerCullingShow(_cam, "Grande Fratello");
+        }
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Sto uscendo dalla collisione " + other);
+        if (other.tag == "Trigger")
+        {
+            CameraExtensions.LayerCullingShow(_cam, "Room" );
+            CameraExtensions.LayerCullingShow(_cam, "NeonLayer");
+            CameraExtensions.LayerCullingShow(_cam,"Default");
+            CameraExtensions.LayerCullingShow(_cam,"TVLights");
+            CameraExtensions.LayerCullingHide(_cam, "Grande Fratello");
         }
         
     }
