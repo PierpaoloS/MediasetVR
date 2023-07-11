@@ -28,12 +28,16 @@ public class VideoTrigger : MonoBehaviour
             Debug.Log("Play Video Introduttivo");
             //tvLight.SetActive(true);
             videoIntroduttivo.SetActive(true);
+            videoGF.SetActive(false);
+            videoGreenScreen.SetActive(false);
         }
         else if (other.gameObject.CompareTag("GrandeFratello"))
         {
             Debug.Log("Play Video Grande Fratello");
             //tvLight.SetActive(true);
             videoGF.SetActive(true);
+            videoIntroduttivo.SetActive(false);
+            videoGreenScreen.SetActive(false);
         }
         else if (other.gameObject.CompareTag("PalinsestoCircle"))
         {
@@ -46,6 +50,8 @@ public class VideoTrigger : MonoBehaviour
             Debug.Log("Play Video GreenScreen");
             //tvLight.SetActive(true);
             videoGreenScreen.SetActive(true);
+            videoIntroduttivo.SetActive(false);
+            videoGF.SetActive(false);
         }
     }
 }
