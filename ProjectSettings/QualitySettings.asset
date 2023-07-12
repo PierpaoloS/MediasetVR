@@ -120,14 +120,14 @@ QualitySettings:
     - Android
   - serializedVersion: 3
     name: High Fidelity
-    pixelLightCount: 2
+    pixelLightCount: 3
     shadows: 2
     shadowResolution: 2
     shadowProjection: 1
     shadowCascades: 2
     shadowDistance: 40
     shadowNearPlaneOffset: 3
-    shadowCascade2Split: 0.33333334
+    shadowCascade2Split: 0.3420594
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
     shadowmaskMode: 1
     skinWeights: 1
@@ -136,7 +136,7 @@ QualitySettings:
     - serializedVersion: 0
       limitBiasMode: 0
       limitBias: 0
-    anisotropicTextures: 2
+    anisotropicTextures: 0
     antiAliasing: 8
     softParticles: 0
     softVegetation: 1
@@ -157,7 +157,7 @@ QualitySettings:
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
-    resolutionScalingFixedDPIFactor: 10
+    resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
     terrainQualityOverrides: 0
     terrainPixelError: 1
