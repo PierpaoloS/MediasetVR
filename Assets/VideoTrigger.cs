@@ -14,6 +14,10 @@ public class VideoTrigger : MonoBehaviour
     public GameObject videoInnovazione2;
     public GameObject videoInnovazione3;
 
+    public GameObject AIButton;
+    public GameObject DVBButton;
+    public GameObject DTTButton;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +36,6 @@ public class VideoTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("TVCircle"))
         {
             Debug.Log("Play Video Introduttivo");
-            //tvLight.SetActive(true);
             videoIntroduttivo.SetActive(true);
             videoGF.SetActive(false);
             videoGreenScreen.SetActive(false);
@@ -40,7 +43,6 @@ public class VideoTrigger : MonoBehaviour
         else if (other.gameObject.CompareTag("GrandeFratello"))
         {
             Debug.Log("Play Video Grande Fratello");
-            //tvLight.SetActive(true);
             videoGF.SetActive(true);
             videoIntroduttivo.SetActive(false);
             videoGreenScreen.SetActive(false);
@@ -48,13 +50,11 @@ public class VideoTrigger : MonoBehaviour
         else if (other.gameObject.CompareTag("PalinsestoCircle"))
         {
             Debug.Log("Play Video Palinsesto");
-            //tvLight.SetActive(true);
             videoPalinsesto.SetActive(true);
         }
         else if (other.gameObject.CompareTag("GreenScreenCircle"))
         {
             Debug.Log("Play Video GreenScreen");
-            //tvLight.SetActive(true);
             videoGreenScreen.SetActive(true);
             videoIntroduttivo.SetActive(false);
             videoGF.SetActive(false);
@@ -65,9 +65,11 @@ public class VideoTrigger : MonoBehaviour
             videoIntroduttivo.SetActive(false);
             videoGF.SetActive(false);
             videoGreenScreen.SetActive(false);
-            //videoPalinsesto.SetActive(false);
             videoInnovazione1.SetActive(false);
             videoInnovazione2.SetActive(false);
             videoInnovazione3.SetActive(false);
+            AIButton.SetActive(false);
+            DVBButton.SetActive(false);
+            DTTButton.SetActive(false);
     }
 }
