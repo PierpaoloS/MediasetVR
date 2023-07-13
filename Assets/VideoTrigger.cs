@@ -9,6 +9,12 @@ public class VideoTrigger : MonoBehaviour
     public GameObject videoGF;
     public GameObject videoGreenScreen;
     public GameObject videoPalinsesto;
+
+    public GameObject videoInnovazione1;
+    public GameObject videoInnovazione2;
+    public GameObject videoInnovazione3;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +59,15 @@ public class VideoTrigger : MonoBehaviour
             videoIntroduttivo.SetActive(false);
             videoGF.SetActive(false);
         }
+    }
+    void OnTriggerExit(Collider other)
+    {
+            videoIntroduttivo.SetActive(false);
+            videoGF.SetActive(false);
+            videoGreenScreen.SetActive(false);
+            //videoPalinsesto.SetActive(false);
+            videoInnovazione1.SetActive(false);
+            videoInnovazione2.SetActive(false);
+            videoInnovazione3.SetActive(false);
     }
 }
