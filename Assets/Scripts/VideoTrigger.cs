@@ -18,6 +18,8 @@ public class VideoTrigger : MonoBehaviour
     public GameObject DVBButton;
     public GameObject DTTButton;
 
+    public GameObject greenSObjects;
+
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +60,7 @@ public class VideoTrigger : MonoBehaviour
             videoGreenScreen.SetActive(true);
             videoIntroduttivo.SetActive(false);
             videoGF.SetActive(false);
+            greenSObjects.SetActive(true);
         }
     }
     void OnTriggerExit(Collider other)

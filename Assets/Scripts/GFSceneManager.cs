@@ -24,7 +24,7 @@ public class GFSceneManager : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("Sto uscendo dalla collisione " + other);
-        if (other.tag == "Trigger")
+        if (other.tag == "MainCamera")
         {
             CameraExtensions.LayerCullingShow(_cam, "Room" );
             CameraExtensions.LayerCullingShow(_cam, "NeonLayer");
