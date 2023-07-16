@@ -11,15 +11,19 @@ public class RaycastManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "PalinsestoCircle")
-        _leftRay.enabled = true;
-        _rightRay.enabled = true;
+        if(other.tag == "PalinsestoCircle") 
+        {
+            _leftRay.enabled = true;
+            _rightRay.enabled = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == "PalinsestoCircle")
-        _leftRay.enabled = false;
-        _rightRay.enabled = false;
+         {
+            _leftRay.enabled = false;
+            _rightRay.enabled = false;
+        }
     }
 }
