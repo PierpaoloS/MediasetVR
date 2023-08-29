@@ -218,6 +218,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5697569550934524700}
   - {fileID: 3612440929480276684}
   - {fileID: 3240324292303777521}
   - {fileID: 2297948972709986990}
@@ -227,7 +228,7 @@ Transform:
   - {fileID: 8737317555853822212}
   - {fileID: 5463085384127354125}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5286802585688776831
 GameObject:
@@ -337,17 +338,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6474132347723396941}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.219}
-  m_LocalScale: {x: 0.06641317, y: 0.18790548, z: 0.18790548}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071069}
+  m_LocalPosition: {x: 0, y: 0, z: -0.40784732}
+  m_LocalScale: {x: 0.12368256, y: 0.16903037, z: 0.04535851}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3612440929480276684}
+  m_Father: {fileID: 9202537158490959879}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.72, y: -0.062}
+  m_AnchoredPosition: {x: -0.2447997, y: -0.055771254}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &5919102004603575231
@@ -496,7 +497,7 @@ GameObject:
   - component: {fileID: 4015002134522552887}
   - component: {fileID: 9044797219123822784}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: ONAIRBOX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -513,8 +514,7 @@ Transform:
   m_LocalPosition: {x: -0.071, y: 0, z: 0}
   m_LocalScale: {x: 0.24139, y: 0.89955, z: 1.8623197}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5697569550934524700}
+  m_Children: []
   m_Father: {fileID: 9202537158490959879}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

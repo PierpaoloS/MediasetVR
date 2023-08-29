@@ -16,6 +16,7 @@ public class GFSceneManager : MonoBehaviour
             CameraExtensions.LayerCullingHide(_cam, "NeonLayer");
             CameraExtensions.LayerCullingHide(_cam,"Default");
             CameraExtensions.LayerCullingHide(_cam,"TVLights");
+            CameraExtensions.LayerCullingHide(_cam,"Palinsesto");
             CameraExtensions.LayerCullingShow(_cam, "Grande Fratello");
         }
         
@@ -30,6 +31,7 @@ public class GFSceneManager : MonoBehaviour
             CameraExtensions.LayerCullingShow(_cam, "NeonLayer");
             CameraExtensions.LayerCullingShow(_cam,"Default");
             CameraExtensions.LayerCullingShow(_cam,"TVLights");
+            CameraExtensions.LayerCullingShow(_cam,"Palinsesto");
             CameraExtensions.LayerCullingHide(_cam, "Grande Fratello");
         }
         

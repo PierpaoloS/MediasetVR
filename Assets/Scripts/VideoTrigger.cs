@@ -19,10 +19,12 @@ public class VideoTrigger : MonoBehaviour
     public GameObject DTTButton;
 
     public GameObject greenSObjects;
+    public GameObject onAirBox;
+   // public GameObject sigla; 
 
-    public float secPali = 14f;
-    public float secGF = 14f;
-    public float secGreen = 14f;
+    //public float secPali = 14f;
+    //public float secGF = 14f;
+    //public float secGreen = 14f;
 
 
     // Start is called before the first frame update
@@ -45,7 +47,7 @@ public class VideoTrigger : MonoBehaviour
             videoIntroduttivo.SetActive(true);
             videoGF.SetActive(false);
             videoGreenScreen.SetActive(false);
-            Invoke("SetFalseIntro", 18.0f);
+            Invoke("SetFalseIntro", 19.0f);
         }
         else if (other.gameObject.CompareTag("GrandeFratello"))
         {
@@ -53,13 +55,13 @@ public class VideoTrigger : MonoBehaviour
             videoGF.SetActive(true);
             videoIntroduttivo.SetActive(false);
             videoGreenScreen.SetActive(false);
-            Invoke("SetFalseGF", 12.0f);
+            Invoke("SetFalseGF", 13.0f);
         }
         else if (other.gameObject.CompareTag("PalinsestoCircle"))
         {
             Debug.Log("Play Video Palinsesto");
             videoPalinsesto.SetActive(true);
-            Invoke("SetFalsePali", 14.0f);
+            Invoke("SetFalsePali", 15.0f);
         }
         else if (other.gameObject.CompareTag("GreenScreenCircle"))
         {
@@ -69,6 +71,7 @@ public class VideoTrigger : MonoBehaviour
             videoGF.SetActive(false);
             greenSObjects.SetActive(true);
             Invoke("SetFalseGreen", 21.0f);
+            Invoke("ShowOnAirBox", 12.0f);
         }
     }
     void OnTriggerExit(Collider other)
@@ -103,6 +106,12 @@ public class VideoTrigger : MonoBehaviour
     void SetFalseIntro()
     {
        videoIntroduttivo.SetActive(false);       
+    }
+
+    void ShowOnAirBox()
+    {
+       onAirBox.SetActive(true);   
+      // sigla.SetActive(true);    
     }
 
 }
