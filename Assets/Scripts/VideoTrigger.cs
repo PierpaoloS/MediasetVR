@@ -1,14 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class VideoTrigger : MonoBehaviour
 {
-    //public GameObject tvLight;
     public GameObject videoIntroduttivo;
     public GameObject videoGF;
-    public GameObject videoGreenScreen;
     public GameObject videoPalinsesto;
+    
+    // Parte GreenScreen
+
+    public GameObject videoGreenScreen;
+    public GameObject siglaTG;
+    public GameObject areaGF;
+    public GameObject areaPalinsesto;
+    public GameObject videoGobbo;
+    public GameObject videoTG5;
+    public GameObject greenSObjects;
+    public GameObject onAirBox;
+    public GameObject smartScreen1;
+    public GameObject smartScreen2;
+
+    // Parte Innovazione
 
     public GameObject videoInnovazione1;
     public GameObject videoInnovazione2;
@@ -18,19 +32,20 @@ public class VideoTrigger : MonoBehaviour
     public GameObject DVBButton;
     public GameObject DTTButton;
 
-    public GameObject greenSObjects;
-    public GameObject onAirBox;
-   // public GameObject sigla; 
+    // Gestione Tempi Video
 
-    //public float secPali = 14f;
-    //public float secGF = 14f;
-    //public float secGreen = 14f;
+    public float secFalseIntro = 18.2f;
+    public float secFalsePali = 14.0f;
+    public float secFalseGF = 14.0f;
+    public float secFarlseGreen = 22.0f;
+    public float secTrueGreenStuff = 22.0f;
+    public float secTrueSigla = 22.0f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        
     }
 
     // Update is called once per frame
@@ -47,7 +62,9 @@ public class VideoTrigger : MonoBehaviour
             videoIntroduttivo.SetActive(true);
             videoGF.SetActive(false);
             videoGreenScreen.SetActive(false);
-            Invoke("SetFalseIntro", 19.0f);
+            Invoke("SetFalseIntro", secFalseIntro);
+
+            //test1.Play();
         }
         else if (other.gameObject.CompareTag("GrandeFratello"))
         {
@@ -55,13 +72,13 @@ public class VideoTrigger : MonoBehaviour
             videoGF.SetActive(true);
             videoIntroduttivo.SetActive(false);
             videoGreenScreen.SetActive(false);
-            Invoke("SetFalseGF", 13.0f);
+            Invoke("SetFalseGF", secFalseGF);
         }
         else if (other.gameObject.CompareTag("PalinsestoCircle"))
         {
             Debug.Log("Play Video Palinsesto");
             videoPalinsesto.SetActive(true);
-            Invoke("SetFalsePali", 15.0f);
+            Invoke("SetFalsePali", secFalsePali);
         }
         else if (other.gameObject.CompareTag("GreenScreenCircle"))
         {
@@ -69,9 +86,13 @@ public class VideoTrigger : MonoBehaviour
             videoGreenScreen.SetActive(true);
             videoIntroduttivo.SetActive(false);
             videoGF.SetActive(false);
+            areaGF.SetActive(false);
+            areaPalinsesto.SetActive(false);
             greenSObjects.SetActive(true);
-            Invoke("SetFalseGreen", 21.0f);
-            Invoke("ShowOnAirBox", 12.0f);
+            Invoke("SetFalseGreen", secFarlseGreen);
+            Invoke("ShowOnAirBox", secTrueGreenStuff);
+            Invoke("ShowSmartScreens", secTrueGreenStuff);
+            Invoke("StartSigla", secTrueSigla);
         }
     }
     void OnTriggerExit(Collider other)
@@ -82,10 +103,17 @@ public class VideoTrigger : MonoBehaviour
             videoInnovazione1.SetActive(false);
             videoInnovazione2.SetActive(false);
             videoInnovazione3.SetActive(false);
+            videoPalinsesto.SetActive(false);
             AIButton.SetActive(false);
             DVBButton.SetActive(false);
             DTTButton.SetActive(false);
             greenSObjects.SetActive(false);
+            if (other.gameObject.CompareTag("GreenScreenCircle"))
+            {
+                areaPalinsesto.SetActive(true);
+                areaGF.SetActive(true);
+            }
+            
     }
 
     void SetFalsePali()
@@ -103,6 +131,13 @@ public class VideoTrigger : MonoBehaviour
        videoGreenScreen.SetActive(false);       
     }
 
+    void StartSigla()
+    {
+       siglaTG.SetActive(true); 
+       videoTG5.SetActive(true);  
+       videoGobbo.SetActive(true);     
+    }
+
     void SetFalseIntro()
     {
        videoIntroduttivo.SetActive(false);       
@@ -110,8 +145,13 @@ public class VideoTrigger : MonoBehaviour
 
     void ShowOnAirBox()
     {
-       onAirBox.SetActive(true);   
-      // sigla.SetActive(true);    
+       onAirBox.SetActive(true);      
+    }
+
+    void ShowSmartScreens()
+    {
+        smartScreen1.SetActive(true);
+        smartScreen2.SetActive(true);
     }
 
 }

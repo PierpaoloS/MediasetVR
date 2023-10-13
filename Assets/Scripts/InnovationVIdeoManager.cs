@@ -27,6 +27,7 @@ public class InnovationVIdeoManager : MonoBehaviour
             video1.SetActive(true);
             video2.SetActive(false);
             video3.SetActive(false);
+            Invoke("SetFalseVideo1", 76.0f);
         }
         else if (other.gameObject.CompareTag("Video2"))
         {
@@ -34,6 +35,7 @@ public class InnovationVIdeoManager : MonoBehaviour
             video1.SetActive(false);
             video2.SetActive(true);
             video3.SetActive(false);
+            Invoke("SetFalseVideo2", 158.0f);
         }
         else if (other.gameObject.CompareTag("Video3"))
         {
@@ -41,7 +43,22 @@ public class InnovationVIdeoManager : MonoBehaviour
             video1.SetActive(false);
             video2.SetActive(false);
             video3.SetActive(true);
+            Invoke("SetFalseVideo3", 30.0f);
         }
         
+    }
+     void SetFalseVideo1()
+    {
+        video1.SetActive(false);       
+    }
+
+    void SetFalseVideo2()
+    {
+        video2.SetActive(false);       
+    }
+
+    void SetFalseVideo13()
+    {
+       video3.SetActive(false);       
     }
 }

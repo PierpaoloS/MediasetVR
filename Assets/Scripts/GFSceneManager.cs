@@ -10,7 +10,7 @@ public class GFSceneManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Ho colliso con: " + other);
-        if (other.tag == "MainCamera")
+        if (other.tag == "Trigger")
         {
             CameraExtensions.LayerCullingHide(_cam, "Room" );
             CameraExtensions.LayerCullingHide(_cam, "NeonLayer");
@@ -18,6 +18,7 @@ public class GFSceneManager : MonoBehaviour
             CameraExtensions.LayerCullingHide(_cam,"TVLights");
             CameraExtensions.LayerCullingHide(_cam,"Palinsesto");
             CameraExtensions.LayerCullingShow(_cam, "Grande Fratello");
+            CameraExtensions.LayerCullingShow(_cam, "Hands");
         }
         
     }
@@ -25,7 +26,7 @@ public class GFSceneManager : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("Sto uscendo dalla collisione " + other);
-        if (other.tag == "MainCamera")
+        if (other.tag == "Trigger")
         {
             CameraExtensions.LayerCullingShow(_cam, "Room" );
             CameraExtensions.LayerCullingShow(_cam, "NeonLayer");
@@ -33,6 +34,7 @@ public class GFSceneManager : MonoBehaviour
             CameraExtensions.LayerCullingShow(_cam,"TVLights");
             CameraExtensions.LayerCullingShow(_cam,"Palinsesto");
             CameraExtensions.LayerCullingHide(_cam, "Grande Fratello");
+            CameraExtensions.LayerCullingShow(_cam, "Hands");
         }
         
     }
